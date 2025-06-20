@@ -457,18 +457,19 @@ useEffect(() => {
                   })()
                 )}
               </div>
-            <div className="space-y-2">
-              <label htmlFor="description">{t("repairs.description")}</label>
-              <Textarea
-                id="description"
-                value={newRepair.description}
-                onChange={(e) =>
-                  setNewRepair({ ...newRepair, description: e.target.value })
-                }
-                placeholder="Describe the issue..."                rows={4}
-                placeholder="อธิบายปัญหาที่ต้องการแจ้งซ่อม..."
-              />
-            </div>
+<div className="space-y-2">
+  <label htmlFor="description">{t("repairs.description")}</label>
+  <Textarea
+    id="description"
+    value={newRepair.description}
+    onChange={(e) =>
+      setNewRepair({ ...newRepair, description: e.target.value })
+    }
+    rows={4}
+    placeholder="อธิบายปัญหาที่ต้องการแจ้งซ่อม..."
+  />
+</div>
+
            <div className="space-y-2">
               <label htmlFor="status">{t("repairs.status") || "สถานะ"}</label>
               {user?.role === "admin" || user?.role === "staff" ? (
